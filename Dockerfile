@@ -31,9 +31,8 @@ git
 #Copie et execution du script pour l'installation et l'initialisation de GLPI
 
 RUN git clone https://github.com/renaro130182/docker-glpi
-COPY docker-glpi/glpi-start.sh /opt/
-RUN chmod +x /opt/glpi-start.sh
-ENTRYPOINT ["/opt/glpi-start.sh"]
+RUN chmod +x /docker-glpi/glpi-start.sh
+ENTRYPOINT ["/docker-glpi/glpi-start.sh"]
 
 #Exposition des ports
 EXPOSE 80 443
