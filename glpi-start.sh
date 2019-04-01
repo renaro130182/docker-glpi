@@ -4,7 +4,7 @@
 [[ ! "$VERSION_GLPI" ]] \
 	&& VERSION_GLPI=$(curl -s https://api.github.com/repos/glpi-project/glpi/releases/latest | grep tag_name | cut -d '"' -f 4)
 
-if [[ -z "${TIMEZONE}" ]]; then echo "TIMEZONE is unset"; 
+if [[ -z "${TIMEZONE=America/Sao_Paulo}" ]]; then echo "TIMEZONE is America/Sao_Paulo"; 
 else echo "date.timezone = \"$TIMEZONE\"" > /etc/php/7.0/apache2/conf.d/timezone.ini;
 fi
 
