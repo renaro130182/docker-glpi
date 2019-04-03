@@ -30,7 +30,7 @@ git
 
 #Copie et execution du script pour l'installation et l'initialisation de GLPI
 
-RUN git clone https://github.com/renaro130182/docker-glpi
+RUN git clone https://github.com/renato130182/docker-glpi
 RUN chmod +x /docker-glpi/glpi-start.sh
 ENTRYPOINT ["/docker-glpi/glpi-start.sh"]
 
